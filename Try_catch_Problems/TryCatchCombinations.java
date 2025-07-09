@@ -5,33 +5,33 @@ class TryCatchCombinations
 	{
         // Valid Example
         try 
-		{
+	{
             System.out.println("Try block executed");
         } 
-		catch (ArithmeticException e) 
-		{
+	catch (ArithmeticException e) 
+	{
             System.out.println("Catch block executed");
         } 
-		finally 
-		{
+	finally 
+	{
             System.out.println("Finally block executed");
         }
 
         // Nested try-catch
         try 
+	{
+            	try 
 		{
-            try 
-			{
-                System.out.println("Nested try block");
-            } 
-			catch (Exception e) 
-			{
-                System.out.println("Nested catch block");
-            }
-        } 
+                	System.out.println("Nested try block");
+            	} 
 		catch (Exception e) 
 		{
-            System.out.println("Outer catch block");
+                	System.out.println("Nested catch block");
+            	}
+        } 
+	catch (Exception e) 
+	{
+            	System.out.println("Outer catch block");
         }
     }
 }
